@@ -2,10 +2,10 @@
 
 import { useSession } from 'next-auth/react'
 import { Navigation } from '@/components/navigation'
-import { CalendarView } from '@/components/calendar-view'
+import { ChoresView } from '@/components/chores-view'
 import { SignInPrompt } from '@/components/sign-in-prompt'
 
-export default function Home() {
+export default function ChoresPage() {
   const { data: session, status } = useSession()
 
   if (status === 'loading') {
@@ -24,7 +24,7 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50">
       <Navigation />
       <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-        <CalendarView />
+        <ChoresView />
       </main>
     </div>
   )
